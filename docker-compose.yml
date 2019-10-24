@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  gitlab:
+    image: "gitlab/gitlab-ce:latest"
+    ports:
+      - "80:80"
+    container_name: "gitlabcontainer"
+#container host
+  sonarqube:
+    image: "sonarqube:latest"
+    ports:
+      - "9000:9000"
+    container_name: "sonarqubecontainer"
+  jenkins:
+    image: "jenkins:latest"
+    ports:
+      - "1024:1024"
+    container_name: "jenkinscontainer"
