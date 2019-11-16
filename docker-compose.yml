@@ -12,7 +12,15 @@ services:
       - "9000:9000"
     container_name: "sonarqubecontainer"
   jenkins:
-    image: "jenkins:latest"
+    image: "jenkins/jenkins:latest"
     ports:
-      - "1024:1024"
+      - "8080:8080"
     container_name: "jenkinscontainer"
+  registry:
+    image: registry:2
+    ports:
+    - "5000:5000"
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - ./data:/data   
