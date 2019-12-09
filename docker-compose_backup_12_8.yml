@@ -21,7 +21,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock 
       - ./thedata:/thedata
   registry:
-    image: "devops/registryy:v1"
+    image: registry:2
     ports:
     - "6000:5000"
     environment:

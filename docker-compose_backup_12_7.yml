@@ -13,7 +13,7 @@ services:
       - "9000:9000"
     container_name: "sonarqubecontainer"
   jenkins:
-    image: "devops/jenkinss:v1"
+    image: "jenkins/jenkins:latest"
     ports:
       - "8080:8080"
     container_name: "jenkinscontainer"
@@ -21,7 +21,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock 
       - ./thedata:/thedata
   registry:
-    image: "devops/registryy:v1"
+    image: registry:2
     ports:
     - "6000:5000"
     environment:

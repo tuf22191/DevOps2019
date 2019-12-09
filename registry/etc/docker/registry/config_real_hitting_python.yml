@@ -1,0 +1,19 @@
+version: 0.1
+loglevel: debug
+storage:
+    cache:
+        blobdescriptor: inmemory
+    filesystem:
+        rootdirectory: /tmp/registry-dev
+http:
+    addr: 0.0.0.0:5000
+notifications:
+  events:
+    includereferences: true
+  endpoints:
+    - name: alistener
+      disabled: false
+      url: http://34.201.236.34:5507
+      timeout: 1s
+      threshold: 10
+      backoff: 1s

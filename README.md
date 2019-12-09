@@ -7,6 +7,7 @@
 Username: `root`
 Password: `devops2019`
 
+Jenkins : admin, admin
 ### Ann's User
 
 Username:
